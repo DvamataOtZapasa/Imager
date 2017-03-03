@@ -24,11 +24,15 @@ require_once "../content/menu.php"
     <?php
 
     $result = mysqli_query($con,"SELECT * FROM images");
-    while( $image = mysqli_fetch_assoc( $result)){
-        $new_array[] = $row; // Inside while loop
-    }
+    /*while( $image = mysqli_fetch_assoc( $result)){
+        ?> <img src="images/<?= $image['id']?>"> <?php
+    }*/
+    $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
     foreach ($resulta as $image){
-        ?> <img src="images/<?= $result['id']?>"> <?php
+        ?> <img src="images/<?= $image['id'] ?>">
+            <p><?= $image['name']?></p>
+        <?php
+        echo "<br>";
     }
     
     ?>
