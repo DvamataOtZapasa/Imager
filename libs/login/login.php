@@ -7,7 +7,7 @@ $user = $_POST['username'];
 $pass = $_POST['password'];
 
 //$lastURL = str_replace("/site", "", $_SESSION['lastUrl']);
-require 'dbConfig.php';
+require '../dbConfig.php';
 
 $q = mysqli_query($con, "SELECT * FROM $logT WHERE username='$user' AND password='$pass' LIMIT 1");
 if(mysqli_num_rows($q)){

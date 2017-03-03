@@ -15,7 +15,7 @@ require_once "libs/dbConfig.php"
             <div id="container">
 
 
-            <form action="libs/login.php" method="post">
+            <form action="libs/login/login.php" method="post">
                 Username:
                 <input name="username" type="text">
                 Password:
@@ -29,7 +29,7 @@ require_once "libs/dbConfig.php"
                         ?>
                         Lognat s <?= $_SESSION['user']; ?>
 
-                        <form action="libs/logout.php" method="post">
+                        <form action="libs/login/logout.php" method="post">
                             <input type="submit" value="logout">
                         </form>
                         <?php
