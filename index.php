@@ -35,6 +35,11 @@ require_once "libs/dbConfig.php"
                         <?php
                     }else{
                         ?>
+
+                        <form action="libs/login/register.php" method="post">
+
+                        </form>
+
                         <?php
                     }
                 ?>
