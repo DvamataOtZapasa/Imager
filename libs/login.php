@@ -13,10 +13,6 @@ $q = mysqli_query($con, "SELECT * FROM $logT WHERE username='$user' AND password
 if(mysqli_num_rows($q)){
     $user = mysqli_fetch_assoc($q);
     $_SESSION['user'] = $user['username'];
-    $_SESSION['email'] = $user['email'];
-    $_SESSION['type'] = $user['type'];
-    $_SESSION['firstname'] = $user['firstname'];
-    $_SESSION['lastname'] = $user['lastname'];
     goToLastVisited();
 }else{
     $_SESSION['error']= "Грешно име или парола!";

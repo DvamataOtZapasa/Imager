@@ -29,6 +29,14 @@ require_once "libs/dbConfig.php"
 
             </form>
 
+                <?php
+                    if(isset($_SESSION['user'])){
+                        echo "Lognat s " + $_SESSION[user][username];
+                    }else{
+
+                    }
+                ?>
+
         </div>
     </body>
 
