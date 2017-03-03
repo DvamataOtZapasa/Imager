@@ -82,16 +82,17 @@ body{
 }
 
 .rating{
-    width: 100px;
+    width: 124px;
     height: 25px;
     overflow: hidden;
 }
 .rating img{
-    width: 100px;
+    width: 124px;
     height: 25px;
 }
+.ratingFull{overflow: hidden;}
 .ratingEmpty{
     position: relative;
-    top: -21px;
+    top: -25px;
     width: 100px;
 }
