@@ -31,7 +31,7 @@ require_once "libs/dbConfig.php"
 
                 <?php
                     if(isset($_SESSION['user'])){
-                        echo "Lognat s " + $_SESSION[user][username];
+                        echo "Lognat s " + $_SESSION['user']['user'];
                     }else{
 
                     }
