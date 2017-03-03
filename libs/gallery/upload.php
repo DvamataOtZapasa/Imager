@@ -6,7 +6,6 @@ if(isset($_FILES['fileToUpload']['name'])){
 
         $author = $_SESSION['id'];
         $name = $_POST['name'];
-        echo $author;
 
         $imagetype = $_FILES['fileToUpload']['type'];
 
@@ -19,7 +18,7 @@ if(isset($_FILES['fileToUpload']['name'])){
             $id = mysqli_fetch_assoc($id);
             $id = $id['AUTO_INCREMENT']-1;
             echo "../../images/$id".".".$imagetype;
-            move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "../../images/$id");
+            move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "../../gallery/$id");
         }
     }
 }else{

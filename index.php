@@ -25,8 +25,10 @@ require_once "libs/dbConfig.php"
             </form>
 
 
-            <form action="libs/gallery/upload.php" method="post">
-                <input required type="file" class="form-control" accept="image/*" name="fileToUpload" cols="7"/>
+            <form action="libs/gallery/upload.php" method="post" enctype="multipart/form-data">
+                Name The Picture:<br>
+                <input required type="text" name="name"><br>
+                <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
                 <input type="submit" value="upload">
             </form>
 
