@@ -18,7 +18,7 @@ require_once "libs/dbConfig.php"
                 <li><a href="login.php">Login</a></li>
             </ul>
 
-            </div>
+        </div>
             <div id="container">
 
 
