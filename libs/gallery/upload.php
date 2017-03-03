@@ -1,13 +1,12 @@
 <?php
 session_start();
-error_reporting(E_ALL);
-print_r($_FILES);
 if(isset($_FILES['fileToUpload']['name'])){
     if(strpos($_FILES['fileToUpload']['type'], "image") !== false && $_FILES['fileToUpload']['size'] <= 20000000){
 
 
         $author = $_SESSION['id'];
         $name = $_POST['name'];
+        echo $author;
 
         $imagetype = $_FILES['fileToUpload']['type'];
 
@@ -23,6 +22,8 @@ if(isset($_FILES['fileToUpload']['name'])){
             move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "../../images/$id");
         }
     }
+}else{
+    echo "WUT";
 }
 //header("Location:/site/gallery")
 ?>

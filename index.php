@@ -26,7 +26,7 @@ require_once "libs/dbConfig.php"
 
 
             <form action="libs/gallery/upload.php" method="post">
-                <input type="file">
+                <input type="file" accept="image/*">
                 <input type="submit" value="upload">
             </form>
 
