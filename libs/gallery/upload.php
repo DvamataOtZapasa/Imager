@@ -21,8 +21,6 @@ if(isset($_FILES['fileToUpload']['name'])){
             move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "../../gallery/$id");
         }
     }
-}else{
-    echo "WUT";
 }
 //header("Location:/site/gallery")
 ?>
