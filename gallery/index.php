@@ -24,8 +24,7 @@ require_once "../content/menu.php"
     <?php
 
     $result = mysqli_query($con,"SELECT * FROM images");
-    $resulta = mysqli_fetch_assoc($result);
-    foreach ($resulta as $image){
+    while( $image = mysqli_fetch_assoc( $result)){
         ?> <img src="images/<?= $result['id']?>"> <?php
     }
     
