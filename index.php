@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once "/libs/dbConfig.php"
+require_once "/libs/dbConfig.php";
+require_once "/libs/gallery/rating.php";
 
 ?>
 <html>
@@ -31,6 +32,7 @@ require_once "/content/menu.php"
     foreach ($resulta as $image){
         ?> <img src="/gallery/images/<?= $image['id'] ?>">
             <p><?= $image['name']?></p>
+            <p><?= getRating($con,$image['id'])?></p>
         <?php
         echo "<br>";
     }
