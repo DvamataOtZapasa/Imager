@@ -41,4 +41,21 @@ body{
     text-align: center;
     left: 790px;
     top: 59px;
+    font-family:consolas;
+    color:white;
+}
+#loginForm input {
+    border:none;
+}
+#loginForm #loginSend {
+    background-color:white;
+}
+#error {
+    color:red;
+}
+#regButt {
+    text-decoration:none;
+    color: green;
+    text-align: center;
+    font-family:consolas;
 }

@@ -29,6 +29,6 @@
         <input type="submit" value="Login">
         <a href=""></a>
     </form>
-    <a href="/register.php">Register</a>
+    <a id="regButt" href="/register.php">Register</a>
     </div>
 </div>
