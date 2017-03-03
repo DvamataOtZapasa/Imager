@@ -32,6 +32,11 @@ require_once "libs/dbConfig.php"
                         <form action="libs/login/logout.php" method="post">
                             <input type="submit" value="logout">
                         </form>
+
+                        <form action="libs/gallery/upload.php" method="post">
+                            
+                        </form>
+
                         <?php
                     }else{
                         ?>
