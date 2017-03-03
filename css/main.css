@@ -15,12 +15,15 @@ body{
     text-align: center;
 }
 #menuList li{
-    margin-left: 30px;
     display: inline;
     text-align: center;
     border:1px solid white;
-    padding:13px;
-    padding:13px;
+    padding:23px 20px;
+    transition:background-color 1s ease-in-out, color 1s ease-in;
+}
+#menuList li:hover {
+    background-color: black;
+    color:white;
 }
 #menulist li a {
     text-decoration:none;
