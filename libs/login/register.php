@@ -17,4 +17,4 @@ if(mysqli_num_rows($result) == 0){
 }else{
     $_SESSION['ERROR'] = "Username already taken";
 }
-header("location:../../");
+header("location:/");
