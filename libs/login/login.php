@@ -13,6 +13,7 @@ $q = mysqli_query($con, "SELECT * FROM $logT WHERE username='$user' AND password
 if(mysqli_num_rows($q)){
     $user = mysqli_fetch_assoc($q);
     $_SESSION['user'] = $user['username'];
+    $_SESSION['id'] = $user['id'];
     header("location:../../");
 }else{
     $_SESSION['error']= "Грешно име или парола!";
