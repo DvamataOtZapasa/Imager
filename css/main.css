@@ -69,3 +69,14 @@ body{
 #regForm input {
     border:none;
 }
+#container .img {
+    width: 356px;
+    display: inline-block;
+}
+#container .img img {
+    width:270px;
+}
+#container .img p {
+    text-align: center;
+    font-family:consolas;
+}
