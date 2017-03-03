@@ -7,6 +7,7 @@ if(isset($_FILES['fileToUpload']['name'])){
 
 
         $author = $_SESSION['user'];
+        $name = $_POST['name']
 
         $imagetype = $_FILES['fileToUpload']['type'];
 
@@ -14,7 +15,7 @@ if(isset($_FILES['fileToUpload']['name'])){
 
             $imagetype = str_replace("image/", "", $imagetype);
             require '../dbConfig.php';
-            mysqli_query($con, 'INSERT INTO `images`(`name`, `author`, `desc`, `rating`, `category`) VALUES ("'.$title.'","'.$author.'","'.$desc.'",0,'.$cat.')');
+            mysqli_query($con, "INSERT INTO `images`(`name`, `author`) VALUES ('$author','$name',)");
             $id = mysqli_query($con, "SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '$dbName' AND   TABLE_NAME   = 'gallery'");
             echo 'INSERT INTO `gallery`(`name`, `author`, `desc`, `rating`, `category`) VALUES ("'.$title.'","'.$author.'","'.$desc.'",0,'.$cat.')';
             $id = mysqli_fetch_assoc($id);
