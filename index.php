@@ -1,8 +1,11 @@
 <?php
 ?>
 <html>
-
-<body>
-IMAGER YAY
-</body>
+    <title>Imager</title>
+    <body>
+        <div id="menu"></div>
+        <div id="container">
+            
+        </div>
+    </body>
 </html>
