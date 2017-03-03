@@ -36,7 +36,9 @@ body{
 #loginForm {
     display:none;
     position: fixed;
-    border:2px solid red;
+    border:2px solid grey;
     background-color: #1D315E;
     text-align: center;
+    left: 790px;
+    top: 59px;
 }
