@@ -8,10 +8,11 @@
     </ul>
     <form action="/libs/login/login.php" method="post" id="loginForm">
         Username:<br>
-        <input name="username" type="text">
+        <input name="username" type="text"><br>
         Password:<br>
         <input name="password" type="password">
-        <input type="submit">
-
+        <br>
+        <input type="submit" value="Log in">
+        <a href=""></a>
     </form>
 </div>
