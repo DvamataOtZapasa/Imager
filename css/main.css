@@ -50,3 +50,6 @@ body{
 #loginForm #loginSend {
     background-color:white;
 }
+#error {
+    color:light-coral;
+}

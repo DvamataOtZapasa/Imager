@@ -13,7 +13,7 @@ require_once "libs/dbConfig.php"
             require_once "content/menu.php"
         ?>
         <div id="container">
-            <p>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </p>
+
         </div>
         <script src="/js/js.js"></script>
     </body>
