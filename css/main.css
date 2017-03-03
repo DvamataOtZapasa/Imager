@@ -4,9 +4,8 @@ body{
 #menuContainer{
     height: 60px;
     width: 100%;
-    background-color: #34495e;
+    background-color: #1D315E;
 }
-
 #menuList{
     list-style-type: none;
     padding-top: 18px;
@@ -29,12 +28,13 @@ body{
     color:whitesmoke;
     font-family:consolas;
     font-size:19pt;
-
-
 }
 #menuList li:first-of-type{
     margin-left: 0
 }
 #loginForm {
     display:none;
+    position: fixed;
+    border:2px solid red;
+    background-color: #1D315E;
 }
