@@ -2,7 +2,7 @@
 
     <ul id="menuList">
         <li><a href="/">Gallery</a></li>
-        <li><a href="/contacs.php">Contacts</a></li>
+        <li><a href="/contacts.php">Contacts</a></li>
         <?php if(isLogged()){?>
             <li><a href="/libs/login/logout">Logout</a> </li>
         <?php }else{ ?>

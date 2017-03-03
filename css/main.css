@@ -83,13 +83,13 @@ body{
 }
 
 .rating{
-    width: 124px; !important;
-    height: 25px; !important;
+    width: 124px !important;
+    height: 25px !important;
     overflow: hidden;
 }
 .rating img{
-    width: 124px; !important;
-    height: 25px; !important;
+    width: 124px !important;
+    height: 25px !important;
 }
 .ratingFull{
     overflow: hidden;
