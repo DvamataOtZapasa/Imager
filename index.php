@@ -23,20 +23,25 @@ require_once "libs/dbConfig.php"
 
 
             <form action="libs/login.php" method="post">
+                Username:
                 <input name="username" type="text">
+                Password:
                 <input name="password" type="password">
                 <input type="submit">
 
             </form>
-                <form action="libs/logout.php" method="post">
-                    <input type="submit" value="logout">
-                </form>
 
                 <?php
                     if(isset($_SESSION['user'])){
-                        echo "Lognat s " + $_SESSION['user'];
+                        ?>
+                        Lognat s <?= $_SESSION['user']; ?>
+                        <?php
                     }else{
-
+                        ?>
+                            <form action="libs/logout.php" method="post">
+                                <input type="submit" value="logout">
+                            </form>
+                        <?php
                     }
                 ?>
 
