@@ -14,6 +14,8 @@ function getRating($con,$id){
 }
 
 function rate($con,$id,$rating){
-    $result = mysqli_query($con,"SELECT * FROM `images` WHERE id = '$id'");
+    $ratingt = $rating+"star";
+    $result = mysqli_query($con,"SELECT `$ratingt` FROM `images` WHERE id = '$id'");
     $r = mysqli_fetch_row($result);
+    $result = mysqli_query($con,"UPDATE `images` `image`");
 }
