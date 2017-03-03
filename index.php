@@ -17,9 +17,9 @@ require_once "libs/dbConfig.php"
 
             <form action="libs/login/login.php" method="post" id="loginForm">
                 Username:<br>
-                <input name="username" type="text"><br>
+                <input name="username" type="text">
                 Password:<br>
-                <input name="password" type="password"><br>
+                <input name="password" type="password">
                 <input type="submit">
 
             </form>

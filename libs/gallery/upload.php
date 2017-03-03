@@ -18,11 +18,9 @@ if(isset($_FILES['fileToUpload']['name'])){
             $id = mysqli_fetch_assoc($id);
             $id = $id['AUTO_INCREMENT']-1;
             echo "../../images/$id".".".$imagetype;
-            move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "../../gallery/$id");
+            move_uploaded_file($_FILES['fileToUpload']['tmp_name'], "../../gallery/images/$id");
         }
     }
-}else{
-    echo "WUT";
 }
 //header("Location:/site/gallery")
 ?>
