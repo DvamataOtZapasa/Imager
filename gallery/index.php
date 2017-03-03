@@ -1,63 +1,40 @@
 <?php
 session_start();
-require_once "libs/dbConfig.php"
+require_once "../libs/dbConfig.php"
 
 ?>
 <html>
 <head>
     <title>Imager</title>
-    <link type="text/css" rel="stylesheet" href="css/main.css" >
+    <link type="text/css" rel="stylesheet" href="../css/main.css" >
 </head>
 <body>
 <?php
-require_once "content/menu.php"
+require_once "../content/menu.php"
 ?>
 <div id="container">
 
-
-    <form action="libs/login/login.php" method="post" id="loginForm">
-        Username:<br>
-        <input name="username" type="text">
-        Password:<br>
-        <input name="password" type="password">
-        <input type="submit">
-
-    </form>
-
-
-    <form action="libs/gallery/upload.php" method="post" enctype="multipart/form-data">
-        Name The Picture:<br>
-        <input required type="text" name="name"><br>
-        <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
-        <input type="submit" value="upload">
-    </form>
-
-    <?php
-    if(isset($_SESSION['user'])){
-        ?>
-        Lognat si <?= $_SESSION['user']; ?>
-
-        <form action="libs/login/logout.php" method="post">
-            <input type="submit" value="logout">
+    <?php if(isLogged()){?>
+        <form action="../libs/gallery/upload.php" method="post" enctype="multipart/form-data">
+            Name The Picture:<br>
+            <input required type="text" name="name"><br>
+            <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
+            <input type="submit" value="upload">
         </form>
+    <?php }
 
-
+    $result = mysqli_query($con,"SELECT * FROM images");
+    /*while( $image = mysqli_fetch_assoc( $result)){
+        ?> <img src="images/<?= $image['id']?>"> <?php
+    }*/
+    $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    foreach ($resulta as $image){
+        ?> <img src="images/<?= $image['id'] ?>">
+            <p><?= $image['name']?></p>
         <?php
-    }else{
-        ?>
-
-        <form action="libs/login/register.php" method="post">
-            Username:
-            <input name="username" type="text">
-            Password:
-            <input name="pass1" type="password">
-            Password again:
-            <input name="pass2" type="password">
-            <input type="submit">
-        </form>
-
-        <?php
+        echo "<br>";
     }
+    
     ?>
 
 </div>
