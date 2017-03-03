@@ -3,6 +3,11 @@
  */
 function showLogin() {
     var login = document.getElementById("loginForm");
+    if (login.style.display == "block"){
+        login.style.display = "none";
+    }
+    else {
+        login.style.display = "block";
+    }
 
-    login.style.display = "block";
 }
