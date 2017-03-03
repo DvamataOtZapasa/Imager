@@ -1,8 +1,7 @@
 <div id="menuContainer">
 
     <ul id="menuList">
-        <li><a href="/index.php">Home</a></li>
-        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/">Gallery</a></li>
         <li><a href="/contacs.php">Contacts</a></li>
         <?php if(isLogged()){?>
             <li><a href="/libs/login/logout">Logout</a> </li>
