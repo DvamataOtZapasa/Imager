@@ -19,6 +19,7 @@ body{
     border:1px solid white;
     padding: 23px 20px 14px 20px;
     transition:background-color 1s ease-in-out;
+    font-family:consolas;
 }
 #menuList li:hover {
     background-color: #0A1B40;
@@ -35,6 +36,9 @@ body{
 #loginForm {
     display:none;
     position: fixed;
-    border:2px solid red;
+    border:2px solid grey;
     background-color: #1D315E;
+    text-align: center;
+    left: 790px;
+    top: 59px;
 }
