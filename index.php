@@ -3,8 +3,10 @@ require_once "libs/dbConfig.php"
 
 ?>
 <html>
-    <title>Imager</title>
-    <link type="text/css" rel="stylesheet" href="css/main.css" >
+    <head>
+        <title>Imager</title>
+        <link type="text/css" rel="stylesheet" href="css/main.css" >
+    </head>
     <body>
         <div id="menuContainer">
 
@@ -15,8 +17,8 @@ require_once "libs/dbConfig.php"
                 <li><a href="login.php">login</a></li>
             </ul>
 
-        </div>
-        <div id="container">
+            </div>
+            <div id="container">
 
 
             <form action="libs/login.php" method="post">
