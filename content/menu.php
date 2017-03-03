@@ -6,7 +6,7 @@
         <li><a href="/contacs.php">Contacts</a></li>
         <li onclick="showLogin()">Login</li>
     </ul>
-    <form action="libs/login/login.php" method="post" id="loginForm">
+    <form action="/libs/login/login.php" method="post" id="loginForm">
         Username:<br>
         <input name="username" type="text">
         Password:<br>

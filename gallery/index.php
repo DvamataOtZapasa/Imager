@@ -14,14 +14,14 @@ require_once "../content/menu.php"
 ?>
 <div id="container">
 
-    <form action="../libs/gallery/upload.php" method="post" enctype="multipart/form-data">
-        Name The Picture:<br>
-        <input required type="text" name="name"><br>
-        <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
-        <input type="submit" value="upload">
-    </form>
-
-    <?php
+    <?php if(isLogged()){?>
+        <form action="../libs/gallery/upload.php" method="post" enctype="multipart/form-data">
+            Name The Picture:<br>
+            <input required type="text" name="name"><br>
+            <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
+            <input type="submit" value="upload">
+        </form>
+    <?php }
 
     $result = mysqli_query($con,"SELECT * FROM images");
     /*while( $image = mysqli_fetch_assoc( $result)){
