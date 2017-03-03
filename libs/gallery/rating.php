@@ -10,7 +10,9 @@ function getRating($con,$id){
         $finalrating = (5*$r['3'] + 4*$r['4'] + 3*$r['5'] + 2*$r['6'] + 1*$r['7']) / $weigthed;
     };
 
+    return number_format((float)$finalrating, 1, '.', '');
+}
 
+function rate($con,$id,$rating){
 
-    return $finalrating;
 }
