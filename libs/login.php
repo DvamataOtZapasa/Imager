@@ -4,21 +4,17 @@ session_start();
 //$pass = md5(addslashes($_POST['pass1']));
 
 $user = $_POST['username'];
-$pass = $_POST['pass'];
+$pass = $_POST['password'];
 
 //$lastURL = str_replace("/site", "", $_SESSION['lastUrl']);
-require 'php/dbConfig.php';
+require 'dbConfig.php';
 
 $q = mysqli_query($con, "SELECT * FROM $logT WHERE username='$user' AND password='$pass' LIMIT 1");
 if(mysqli_num_rows($q)){
     $user = mysqli_fetch_assoc($q);
     $_SESSION['user'] = $user['username'];
-    $_SESSION['email'] = $user['email'];
-    $_SESSION['type'] = $user['type'];
-    $_SESSION['firstname'] = $user['firstname'];
-    $_SESSION['lastname'] = $user['lastname'];
-    goToLastVisited();
+    header("location:../index.php");
 }else{
     $_SESSION['error']= "Грешно име или парола!";
-    goToLastVisited();
+    header("location:../index.php");
 }
