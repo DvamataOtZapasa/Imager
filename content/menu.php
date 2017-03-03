@@ -1,3 +1,4 @@
+
 <div id="menuContainer">
 
     <ul id="menuList">
@@ -6,7 +7,7 @@
         <?php if(isLogged()){?>
             <li><a href="/libs/login/logout">Logout</a> </li>
         <?php }else{ ?>
-            <li onclick="showLogin()">Login</li>
+            <li id="loginButton" onclick="showLogin()">Login</li>
         <?php }; ?>
     </ul>
 <?php

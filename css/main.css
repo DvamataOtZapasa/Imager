@@ -20,15 +20,16 @@ body{
     padding: 23px 20px 14px 20px;
     transition:background-color 1s ease-in-out;
     font-family:consolas;
+    color:whitesmoke;
+    font-size:19pt;
+    cursor: pointer;
 }
 #menuList li:hover {
     background-color: #0A1B40;
 }
 #menulist li a {
-    text-decoration:none;
     color:whitesmoke;
-    font-family:consolas;
-    font-size:19pt;
+    text-decoration:none;
 }
 #menuList li:first-of-type{
     margin-left: 0
@@ -37,9 +38,14 @@ body{
     display:none;
     position: absolute;
     border:2px solid grey;
+    border-top: none;
     background-color: #1D315E;
     text-align: center;
-    left: 790px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    left: 415px;
+    right: 0px;
     top: 59px;
     font-family:consolas;
     color:white;
