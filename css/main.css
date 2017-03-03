@@ -86,6 +86,7 @@ body{
     width: 124px !important;
     height: 25px !important;
     overflow: hidden;
+    display:inline-block;
 }
 .rating img{
     width: 124px !important;
@@ -98,4 +99,8 @@ body{
     position: relative;
     top: -25px;
     width: 100px;
+}
+.ratingNum {
+    width: 41px;
+    display: inline-block;
 }
