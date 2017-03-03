@@ -19,6 +19,8 @@ body{
     display: inline;
     text-align: center;
     border:1px solid white;
+    padding:13px;
+    padding:13px;
 }
 #menulist li a {
     text-decoration:none;
