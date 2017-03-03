@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+#menuContainer{
+    height: 60px;
+    width: 100%;
+    background-color: #34495e;
+}
+
+#menuList{
+    list-style-type: none;
+    padding-top: 18px;
+    font-size: 20px;
+    color: white;
+}
+#menuList li{
+    margin-left: 30px;
+    display: inline;
+}
+#menuList li:first-of-type{margin-left: 0}
