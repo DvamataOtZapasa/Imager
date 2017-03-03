@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "libs/dbConfig.php"
+require_once "../libs/dbConfig.php"
 
 ?>
 <html>
@@ -14,17 +14,6 @@ require_once "content/menu.php"
 ?>
 <div id="container">
 
-
-    <form action="libs/login/login.php" method="post" id="loginForm">
-        Username:<br>
-        <input name="username" type="text">
-        Password:<br>
-        <input name="password" type="password">
-        <input type="submit">
-
-    </form>
-
-
     <form action="libs/gallery/upload.php" method="post" enctype="multipart/form-data">
         Name The Picture:<br>
         <input required type="text" name="name"><br>
@@ -33,31 +22,13 @@ require_once "content/menu.php"
     </form>
 
     <?php
-    if(isset($_SESSION['user'])){
-        ?>
-        Lognat si <?= $_SESSION['user']; ?>
 
-        <form action="libs/login/logout.php" method="post">
-            <input type="submit" value="logout">
-        </form>
-
-
-        <?php
-    }else{
-        ?>
-
-        <form action="libs/login/register.php" method="post">
-            Username:
-            <input name="username" type="text">
-            Password:
-            <input name="pass1" type="password">
-            Password again:
-            <input name="pass2" type="password">
-            <input type="submit">
-        </form>
-
-        <?php
+    $result = mysqli_query($con,"SELECT * FROM images");
+    $resulta = mysqli_fetch_array($result);
+    foreach ($resulta as $image){
+        ?> <img src="images/<?= $result['id']?>"> <?php
     }
+    
     ?>
 
 </div>
