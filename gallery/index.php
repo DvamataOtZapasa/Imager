@@ -25,13 +25,16 @@ require_once "../content/menu.php"
 
     $result = mysqli_query($con,"SELECT * FROM images");
     while( $image = mysqli_fetch_assoc( $result)){
+        $new_array[] = $row; // Inside while loop
+    }
+    foreach ($resulta as $image){
         ?> <img src="images/<?= $result['id']?>"> <?php
     }
     
     ?>
 
 </div>
-<script src="/js/js.js"></script> 
+<script src="/js/js.js"></script>
 </body>
 
 </html>
