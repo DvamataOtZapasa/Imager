@@ -18,12 +18,14 @@ require_once "libs/dbConfig.php"
                 <li><a href="login.php">Login</a></li>
             </ul>
 
-            </div>
+        </div>
             <div id="container">
 
 
             <form action="libs/login.php" method="post">
+                Username:
                 <input name="username" type="text">
+                Password:
                 <input name="password" type="password">
                 <input type="submit">
 
@@ -31,9 +33,16 @@ require_once "libs/dbConfig.php"
 
                 <?php
                     if(isset($_SESSION['user'])){
-                        echo "Lognat s " + $_SESSION['user']['user'];
-                    }else{
+                        ?>
+                        Lognat s <?= $_SESSION['user']; ?>
 
+                        <form action="libs/logout.php" method="post">
+                            <input type="submit" value="logout">
+                        </form>
+                        <?php
+                    }else{
+                        ?>
+                        <?php
                     }
                 ?>
 
