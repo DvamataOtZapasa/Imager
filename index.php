@@ -15,10 +15,10 @@ require_once "libs/dbConfig.php"
             <div id="container">
 
 
-            <form action="libs/login/login.php" method="post">
-                Username:
+            <form action="libs/login/login.php" method="post" id="loginForm">
+                Username:<br>
                 <input name="username" type="text">
-                Password:
+                Password:<br>
                 <input name="password" type="password">
                 <input type="submit">
 
@@ -27,7 +27,7 @@ require_once "libs/dbConfig.php"
                 <?php
                     if(isset($_SESSION['user'])){
                         ?>
-                        Lognat s <?= $_SESSION['user']; ?>
+                        Lognat si <?= $_SESSION['user']; ?>
 
                         <form action="libs/login/logout.php" method="post">
                             <input type="submit" value="logout">
@@ -51,6 +51,7 @@ require_once "libs/dbConfig.php"
                 ?>
 
         </div>
+        <script src="/js/js.js"></script>
     </body>
 
 </html>
