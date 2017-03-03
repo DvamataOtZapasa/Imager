@@ -82,6 +82,10 @@ body{
     font-family:consolas;
 }
 
+.ratingText{
+    display: inline-block;
+}
+
 .rating{
     width: 124px !important;
     height: 25px !important;

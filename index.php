@@ -33,7 +33,7 @@ require_once "/content/menu.php"
         ?> <div class="img">
             <img src="/gallery/images/<?= $image['id'] ?>">
                 <p>Name: <?= $image['name']?></p>
-                <p>Rating:</p>
+                <p class="ratingText">Rating:</p>
 
                 <div class="rating" ">
                     <div class="ratingFull" style="width: <?= getRating($con,$image['id'])*20?>%; "><img src="/assets/ratingFull.png"></div>
