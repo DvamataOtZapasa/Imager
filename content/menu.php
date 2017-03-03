@@ -4,7 +4,11 @@
         <li><a href="/index.php">Home</a></li>
         <li><a href="/gallery/">Gallery</a></li>
         <li><a href="/contacs.php">Contacts</a></li>
-        <li onclick="showLogin()">Login</li>
+        <?php if(isLogged()){?>
+            <li><a href="/libs/login/logout">Logout</a> </li>
+        <?php }else{ ?>
+            <li onclick="showLogin()">Login</li>
+        <?php }; ?>
     </ul>
     <form action="/libs/login/login.php" method="post" id="loginForm">
         Username:<br>
@@ -12,7 +16,7 @@
         Password:<br>
         <input name="password" type="password">
         <br>
-        <input type="submit" value="Log in">
+        <input type="submit" value="Login">
         <a href=""></a>
     </form>
 </div>
