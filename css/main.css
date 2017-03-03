@@ -18,7 +18,7 @@ body{
     display: inline;
     text-align: center;
     border:1px solid white;
-    padding:23px 20px;
+    padding: 23px 20px 14px 20px;
     transition:background-color 1s ease-in-out;
 }
 #menuList li:hover {
