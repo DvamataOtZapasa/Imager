@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once "/libs/dbConfig.php"
+require_once "/libs/dbConfig.php";
+require_once "/libs/gallery/rating.php";
 
 ?>
 <html>
@@ -29,10 +30,13 @@ require_once "/content/menu.php"
     }*/
     $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
     foreach ($resulta as $image){
-        ?> <img src="/gallery/images/<?= $image['id'] ?>">
-            <p><?= $image['name']?></p>
+        ?> <div class="img">
+            <img src="/gallery/images/<?= $image['id'] ?>">
+                <p>Name: <?= $image['name']?></p>
+                <p>Rating: <?= getRating($con,$image['id'])?></p>
+            </div><br>
         <?php
-        echo "<br>";
+        ;
     }
     
     ?>
