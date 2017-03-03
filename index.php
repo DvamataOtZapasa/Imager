@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: VICTOR
- * Date: 3.3.2017 г.
- * Time: 13:51
- */
+?>
+<html>
+
+<body>
+IMAGER YAY
+</body>
+</html>
