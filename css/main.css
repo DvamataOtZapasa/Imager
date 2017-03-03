@@ -46,7 +46,6 @@ body{
 }
 #loginForm input {
     border:none;
-    color: white;
 }
 #loginForm #loginSend {
     background-color:white;
