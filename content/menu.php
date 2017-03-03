@@ -10,7 +10,8 @@
             <li onclick="showLogin()">Login</li>
         <?php }; ?>
     </ul>
-    <form action="/libs/login/login.php" method="post" id="loginForm">
+    <div id="loginForm">
+    <form action="/libs/login/login.php" method="post" >
         Username:<br>
         <input name="username" type="text"><br>
         Password:<br>
@@ -19,4 +20,6 @@
         <input type="submit" value="Login">
         <a href=""></a>
     </form>
+    <a href="/register.php">Register</a>
+    </div>
 </div>
