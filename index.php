@@ -35,12 +35,13 @@ require_once "libs/dbConfig.php"
                     if(isset($_SESSION['user'])){
                         ?>
                         Lognat s <?= $_SESSION['user']; ?>
+
+                        <form action="libs/logout.php" method="post">
+                            <input type="submit" value="logout">
+                        </form>
                         <?php
                     }else{
                         ?>
-                            <form action="libs/logout.php" method="post">
-                                <input type="submit" value="logout">
-                            </form>
                         <?php
                     }
                 ?>
