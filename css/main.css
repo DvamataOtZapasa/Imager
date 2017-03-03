@@ -22,7 +22,7 @@ body{
     transition:background-color 1s ease-in-out;
 }
 #menuList li:hover {
-    background-color: black;
+    background-color: #0A1B40;
 }
 #menulist li a {
     text-decoration:none;
