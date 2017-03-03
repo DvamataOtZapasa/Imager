@@ -69,3 +69,18 @@ body{
 #regForm input {
     border:none;
 }
+
+.rating{
+    width: 100px;
+    height: 25px;
+    overflow: hidden;
+}
+.rating img{
+    width: 100px;
+    height: 25px;
+}
+.ratingEmpty{
+    position: relative;
+    top: -21px;
+    width: 100px;
+}
