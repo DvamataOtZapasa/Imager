@@ -19,9 +19,9 @@ require_once "content/menu.php"
         goHome();
     }else{
         ?>
-        <p id="errorMessage"><?php if(isset($_SESSION['ERROR'])){
-                echo $_SESSION['ERROR'];
-                $_SESSION['ERROR'] = "";
+        <p id="errorMessage"><?php if(isset($_SESSION['REGISTER_ERROR'])){
+                echo $_SESSION['REGISTER_ERROR'];
+                $_SESSION['REGISTER_ERROR'] = "";
             } ?></p>
         <form action="libs/login/register.php" method="post">
 
