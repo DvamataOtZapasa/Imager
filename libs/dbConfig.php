@@ -18,4 +18,7 @@ function isLogged(){
         return false;
     }
 }
+function goHome(){
+   header("Location:/");
+}
 ?>

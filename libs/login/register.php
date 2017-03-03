@@ -12,9 +12,9 @@ if(mysqli_num_rows($result) == 0){
     if($pass1 == $pass2){
         mysqli_query($con,"INSERT INTO `users` (`username`, `password`) VALUES ('$username', '$pass1');");
     }else{
-        $_SESSION['ERROR'] = "Passwords do not match;";
+        $_SESSION['ERROR'] = "Passwords do not match.";
     }
 }else{
-    $_SESSION['ERROR'] = "Username already taken";
+    $_SESSION['ERROR'] = "Username already taken.";
 }
-header("location:/");
+header("location:/register.php");
