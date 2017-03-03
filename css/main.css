@@ -82,15 +82,17 @@ body{
 }
 
 .rating{
-    width: 124px;
-    height: 25px;
+    width: 124px; !important;
+    height: 25px; !important;
     overflow: hidden;
 }
 .rating img{
-    width: 124px;
-    height: 25px;
+    width: 124px; !important;
+    height: 25px; !important;
 }
-.ratingFull{overflow: hidden;}
+.ratingFull{
+    overflow: hidden;
+}
 .ratingEmpty{
     position: relative;
     top: -25px;
