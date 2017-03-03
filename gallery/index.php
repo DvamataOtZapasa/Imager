@@ -6,15 +6,15 @@ require_once "../libs/dbConfig.php"
 <html>
 <head>
     <title>Imager</title>
-    <link type="text/css" rel="stylesheet" href="css/main.css" >
+    <link type="text/css" rel="stylesheet" href="../css/main.css" >
 </head>
 <body>
 <?php
-require_once "content/menu.php"
+require_once "../content/menu.php"
 ?>
 <div id="container">
 
-    <form action="libs/gallery/upload.php" method="post" enctype="multipart/form-data">
+    <form action="../libs/gallery/upload.php" method="post" enctype="multipart/form-data">
         Name The Picture:<br>
         <input required type="text" name="name"><br>
         <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
@@ -24,7 +24,7 @@ require_once "content/menu.php"
     <?php
 
     $result = mysqli_query($con,"SELECT * FROM images");
-    $resulta = mysqli_fetch_array($result);
+    $resulta = mysqli_fetch_assoc($result);
     foreach ($resulta as $image){
         ?> <img src="images/<?= $result['id']?>"> <?php
     }
