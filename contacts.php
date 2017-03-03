@@ -1,7 +1,21 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: VICTOR
- * Date: 3.3.2017 г.
- * Time: 17:43
- */
+session_start();
+require_once "/libs/dbConfig.php";
+require_once "/libs/gallery/rating.php";
+
+?>
+<html>
+<head>
+    <title>Imager</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css" >
+</head>
+<body>
+<?php
+require_once "/content/menu.php"
+?>
+<div id="container">
+    <p>Made by: Dimityr Meshev and Viktor Angeliev</p>
+</div>
+</body>
+
+</html>
