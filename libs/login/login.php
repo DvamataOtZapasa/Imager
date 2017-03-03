@@ -16,5 +16,5 @@ if(mysqli_num_rows($q)){
     header("location:../../");
 }else{
     $_SESSION['error']= "Грешно име или парола!";
-    header("location:../../");
+    header("location:/");
 }
