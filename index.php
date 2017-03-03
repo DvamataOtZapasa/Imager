@@ -1,7 +1,9 @@
 
 <html>
-    <title>Imager</title>
-    <link type="text/css" rel="stylesheet" href="css/main.css" >
+    <head>
+        <title>Imager</title>
+        <link type="text/css" rel="stylesheet" href="css/main.css" >
+    </head>
     <body>
         <div id="menuContainer">
 
@@ -11,8 +13,8 @@
                 <li>Contacts</li>
             </ul>
 
-        </div>
-        <div id="container">
+            </div>
+            <div id="container">
 
         </div>
     </body>
