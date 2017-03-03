@@ -30,11 +30,13 @@ require_once "/content/menu.php"
     }*/
     $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
     foreach ($resulta as $image){
-        ?> <img src="/gallery/images/<?= $image['id'] ?>">
-            <p><?= $image['name']?></p>
-            <p><?= getRating($con,$image['id'])?></p>
+        ?> <div class="img">
+            <img src="/gallery/images/<?= $image['id'] ?>">
+                <p>Name: <?= $image['name']?></p>
+                <p>Rating: <?= getRating($con,$image['id'])?></p>
+            </div><br>
         <?php
-        echo "<br>";
+        ;
     }
     
     ?>
