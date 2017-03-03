@@ -23,14 +23,14 @@ require_once "content/menu.php"
                 echo $_SESSION['REGISTER_ERROR'];
                 $_SESSION['REGISTER_ERROR'] = "";
             } ?></p>
-        <form action="libs/login/register.php" method="post">
+        <form action="libs/login/register.php" method="post" id="regForm">
 
-            Username:
+            Username:<br>
             <input name="username" type="text">
-            Password:
+            Password:<br>
             <input name="pass1" type="password">
-            Password again:
-            <input name="pass2" type="password">
+            Password again:<br>
+            <input name="pass2" type="password"><br>
             <input type="submit">
         </form>
 

@@ -35,7 +35,7 @@ body{
 }
 #loginForm {
     display:none;
-    position: fixed;
+    position: absolute;
     border:2px solid grey;
     background-color: #1D315E;
     text-align: center;
@@ -46,16 +46,26 @@ body{
 }
 #loginForm input {
     border:none;
+    display: block;
+    margin:0 auto;
 }
 #loginForm #loginSend {
     background-color:white;
 }
 #error {
     color:red;
+    font-family:"Times New Roman";
 }
 #regButt {
     text-decoration:none;
     color: green;
     text-align: center;
     font-family:consolas;
+}
+#regForm {
+    border:2px solid red;
+    background-color:#0A1B40;
+}
+#regForm input {
+    border:none;
 }
