@@ -40,7 +40,7 @@ require_once "/content/menu.php"
 
                     <img class="ratingEmpty" src="/assets/ratingEmpty.png">
                 </div>
-            <?= getRating($con,$image['id'])?>
+            <p class="ratingNum"><?= getRating($con,$image['id'])?></p>
             </div>
         <?php
         ;
