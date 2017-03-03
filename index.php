@@ -9,16 +9,9 @@ require_once "libs/dbConfig.php"
         <link type="text/css" rel="stylesheet" href="css/main.css" >
     </head>
     <body>
-        <div id="menuContainer">
-
-            <ul id="menuList">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="contacs.php">Contacts</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-
-        </div>
+            <?php
+                require_once "content/menu.php"
+            ?>
             <div id="container">
 
 
