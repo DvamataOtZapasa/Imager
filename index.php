@@ -24,6 +24,12 @@ require_once "libs/dbConfig.php"
 
             </form>
 
+
+            <form action="libs/gallery/upload.php" method="post">
+                <input type="file">
+                <input type="submit" value="upload">
+            </form>
+
                 <?php
                     if(isset($_SESSION['user'])){
                         ?>
@@ -33,9 +39,6 @@ require_once "libs/dbConfig.php"
                             <input type="submit" value="logout">
                         </form>
 
-                        <form action="libs/gallery/upload.php" method="post">
-                            
-                        </form>
 
                         <?php
                     }else{
