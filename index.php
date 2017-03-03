@@ -15,14 +15,7 @@ require_once "libs/dbConfig.php"
             <div id="container">
 
 
-            <form action="libs/login/login.php" method="post" id="loginForm">
-                Username:<br>
-                <input name="username" type="text">
-                Password:<br>
-                <input name="password" type="password">
-                <input type="submit">
-
-            </form>
+            
 
 
             <form action="libs/gallery/upload.php" method="post" enctype="multipart/form-data">
