@@ -16,6 +16,6 @@ if(mysqli_num_rows($q)){
     $_SESSION['id'] = $user['id'];
     header("location:../../");
 }else{
-    $_SESSION['error']= "Грешно име или парола!";
+    $_SESSION['LOGIN_ERROR']= "Wrong username or password";
     header("location:/");
 }

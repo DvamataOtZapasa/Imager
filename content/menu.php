@@ -10,7 +10,17 @@
             <li onclick="showLogin()">Login</li>
         <?php }; ?>
     </ul>
-    <div id="loginForm">
+<?php
+    if (isset($_SESSION['LOGIN_ERROR'])){
+
+    ?> <div id="loginForm" style="display: block !important;"> <?php
+    echo "<span id='error'>" . $_SESSION['LOGIN_ERROR'] . "</span>";
+    $_SESSION['LOGIN_ERROR'] = null;
+    }else{
+        ?>  <div id="loginForm"> <?php
+    }
+    ?>
+
     <form action="/libs/login/login.php" method="post" >
         Username:<br>
         <input name="username" type="text"><br>
