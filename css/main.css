@@ -156,7 +156,8 @@ body{
     text-align: center;
     color: white;
     font-family: consolas;
-    border-bottom-right-radius: 115px;
+    border-bottom-right-radius: 64px;
+    height: 85px;
 }
 #uploadForm input {
     border: none;
