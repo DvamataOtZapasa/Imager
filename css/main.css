@@ -97,6 +97,9 @@ body{
     text-align: center;
     margin-bottom: 25px;
 }
+.insideimg{
+    margin-top: 10px;
+}
 #container .img img {
     width:270px;
     height: 265px;

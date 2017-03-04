@@ -34,7 +34,7 @@ require_once "/content/menu.php";
     foreach ($resulta as $image){
         $rating = getRating($con,$image['id']);
         ?> <div class="img">
-            <img src="/gallery/images/<?= $image['id'] ?>">
+            <img class="insideimg" src="/gallery/images/<?= $image['id'] ?>">
                 <p>Name: <?= $image['name']?></p>
                 <p class="ratingText">Rating:</p>
                 <div class="rating" rating="<?= $rating ?>"<?= $image['id'] ?>">
