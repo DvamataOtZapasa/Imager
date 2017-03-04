@@ -37,7 +37,7 @@ require_once "/content/menu.php";
             <img src="/gallery/images/<?= $image['id'] ?>">
                 <p>Name: <?= $image['name']?></p>
                 <p class="ratingText">Rating:</p>
-                <div class="rating" rating="<?= $rating ?> imageid="<?= $image['id'] ?>">
+                <div class="rating" rating="<?= $rating ?>"<?= $image['id'] ?>">
                     <div class="ratingFull" style="width: <?= $rating*20?>%; "><img src="/assets/ratingFull.png"></div>
                     <img class="ratingEmpty" src="/assets/ratingEmpty.png">
                     <form action="/libs/gallery/rate.php" method="post">
