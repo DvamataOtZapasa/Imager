@@ -13,7 +13,8 @@ require_once "/libs/gallery/rating.php";
 </head>
 <body>
 <?php
-require_once "/content/menu.php"
+require_once "/content/menu.php";
+rate($con,1,2);
 ?>
 <div id="container" ratingallowed="<?= isLogged()?>">
 
