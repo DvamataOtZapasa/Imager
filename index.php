@@ -16,7 +16,6 @@ require_once "/libs/gallery/rating.php";
 require_once "/content/menu.php";
 ?>
 <div id="container" ratingallowed="<?= isLogged()?>">
-
     <?php if(isLogged()){?>
         <form action="/libs/gallery/upload.php" method="post" enctype="multipart/form-data" id="uploadForm">
             Name The Picture:<br>
@@ -24,8 +23,9 @@ require_once "/content/menu.php";
             <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
             <input type="submit" value="upload">
         </form>
-        <div id="images">
-    <?php }
+    <?php }?>
+    <div id="images">
+    <?php
     $result = mysqli_query($con,"SELECT * FROM images");
     $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
     foreach ($resulta as $image){
