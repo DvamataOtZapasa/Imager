@@ -13,9 +13,46 @@ function getRating($con,$id){
     return number_format((float)$finalrating, 1, '.', '');
 }
 
-function rate($con,$id,$rating){
-    $ratingt = $rating+"star";
-    $result = mysqli_query($con,"SELECT `$ratingt` FROM `images` WHERE id = '$id'");
+function isRated($con,$id){
+    $result = mysqli_query($con,"SELECT NULL FROM rated WHERE user='$_SESSION[id]' AND image='$id'");
+    return mysqli_num_rows($result);
+}
+function getCurRating($con,$id){
+    $result = mysqli_query($con,"SELECT rating FROM rated WHERE user='$_SESSION[id]' AND image='$id'");
     $r = mysqli_fetch_all($result,MYSQLI_ASSOC);
-    $result = mysqli_query($con,"UPDATE `images` SET `$ratingt` = $r[0]  WHERE `id` = $id");
+    if($r){
+        return $r[0]['rating'];
+    }
+}
+
+function getNumOfRates($con,$id,$rating){
+    $result = mysqli_query($con,"SELECT `$rating` FROM `images` WHERE id = '$id'");
+    if($result){
+        $r = mysqli_fetch_all($result);
+        return $r[0][0];
+    }else{
+        return 0;
+    }
+}
+
+function changeRating($con,$id,$torating){
+    $crating = getCurRating($con,$id);
+    echo "line 40: " . $crating;
+    $ratingnum = getNumOfRates($con,$id,$crating) - 1;
+    mysqli_query($con,"UPDATE `images` SET `$crating` = $ratingnum  WHERE `id` = $id");
+    $ratingnum = getNumOfRates($con,$id,$torating) + 1;
+    mysqli_query($con,"UPDATE `images` SET `$crating` = $ratingnum  WHERE `id` = $id");
+    mysqli_query($con,"UPDATE `rated` SET `rating` = '$torating'  WHERE `image` = $id AND `user` = $_SESSION[id]");
+}
+
+function rate($con,$id,$rating){
+    $result = mysqli_query($con,"SELECT `$rating` FROM `images` WHERE id = '$id'");
+    $r = mysqli_fetch_all($result);
+    $ratingnum = $r[0][0] + 1;
+    if(!isRated($con,$id)){
+        mysqli_query($con,"UPDATE `images` SET `$rating` = $ratingnum  WHERE `id` = $id");
+        mysqli_query($con,"INSERT INTO `rated` (`user`, `image`, `rating`) VALUES ('$_SESSION[id]', '$id', '$ratingt');");
+    }else{
+        changeRating($con,$id,$rating);
+    }
 }
