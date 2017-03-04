@@ -24,12 +24,9 @@ require_once "/content/menu.php";
             <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
             <input type="submit" value="upload">
         </form>
+        <div id="images">
     <?php }
-
     $result = mysqli_query($con,"SELECT * FROM images");
-    /*while( $image = mysqli_fetch_assoc( $result)){
-        ?> <img src="images/<?= $image['id']?>"> <?php
-    }*/
     $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
     foreach ($resulta as $image){
         $rating = getRating($con,$image['id']);
@@ -37,7 +34,7 @@ require_once "/content/menu.php";
             <img class="insideimg" src="/gallery/images/<?= $image['id'] ?>">
                 <p>Name: <?= $image['name']?></p>
                 <p class="ratingText">Rating:</p>
-                <div class="rating" rating="<?= $rating ?>"<?= $image['id'] ?>">
+                <div class="rating" rating="<?= $rating ?>">
                     <div class="ratingFull" style="width: <?= $rating*20?>%; "><img src="/assets/ratingFull.png"></div>
                     <img class="ratingEmpty" src="/assets/ratingEmpty.png">
                     <form action="/libs/gallery/rate.php" method="post">
@@ -47,12 +44,8 @@ require_once "/content/menu.php";
                 </div>
             <p class="ratingNum""><?= $rating ?></p>
             </div>
-        <?php
-        ;
-    }
-    
-    ?>
-
+        <?php } ?>
+    </div>
 </div>
 <script src="/js/js.js"></script>
 </body>

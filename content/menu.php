@@ -32,4 +32,7 @@
     </form>
     <a id="regButt" href="/register.php">Register</a>
     </div>
+        <?php if(isLogged()){?>
+            <span id="welcomeuser">Welcome <?= $_SESSION['user']?></span>
+        <?php } ?>
 </div>
