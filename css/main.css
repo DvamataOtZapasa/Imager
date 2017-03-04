@@ -136,3 +136,16 @@ body{
     font-family:Consolas;
 
 }
+#owners {
+
+}
+#owners h2 {
+    text-align: center;
+    font-family:Consolas;
+
+}
+#owners p {
+    text-align:center;
+    font-family:Consolas;
+    dislay:inline-block;
+}

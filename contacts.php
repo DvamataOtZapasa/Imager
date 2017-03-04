@@ -14,7 +14,12 @@ require_once "/libs/gallery/rating.php";
     require_once "/content/menu.php"
     ?>
     <div id="container">
-        <p>Made by: Dimityr Meshev and Viktor Angeliev</p>
+        <div id="owners">
+            <h2>This site is made by:</h2>
+            <p>Viktor Aleksiev</p>
+            <p>Dimitur Meshev</p>
+        </div>
+
     </div>
 </body>
 <script src="/js/js.js"></script>
