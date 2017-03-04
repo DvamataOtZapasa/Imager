@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION['id'])){
+    session_start();
+}
 function getRating($con,$id){
     $result = mysqli_query($con,"SELECT * FROM `images` WHERE id = '$id'");
     $r = mysqli_fetch_row($result);
@@ -39,9 +42,12 @@ function changeRating($con,$id,$torating){
     $crating = getCurRating($con,$id);
     echo "line 40: " . $crating;
     $ratingnum = getNumOfRates($con,$id,$crating) - 1;
+    echo "<br>line 42: " . $ratingnum;
     mysqli_query($con,"UPDATE `images` SET `$crating` = $ratingnum  WHERE `id` = $id");
+
     $ratingnum = getNumOfRates($con,$id,$torating) + 1;
-    mysqli_query($con,"UPDATE `images` SET `$crating` = $ratingnum  WHERE `id` = $id");
+    mysqli_query($con,"UPDATE `images` SET `$torating` = $ratingnum  WHERE `id` = $id");
+
     mysqli_query($con,"UPDATE `rated` SET `rating` = '$torating'  WHERE `image` = $id AND `user` = $_SESSION[id]");
 }
 
@@ -51,7 +57,7 @@ function rate($con,$id,$rating){
     $ratingnum = $r[0][0] + 1;
     if(!isRated($con,$id)){
         mysqli_query($con,"UPDATE `images` SET `$rating` = $ratingnum  WHERE `id` = $id");
-        mysqli_query($con,"INSERT INTO `rated` (`user`, `image`, `rating`) VALUES ('$_SESSION[id]', '$id', '$ratingt');");
+        mysqli_query($con,"INSERT INTO `rated` (`user`, `image`, `rating`) VALUES ('$_SESSION[id]', '$id', '$rating');");
     }else{
         changeRating($con,$id,$rating);
     }

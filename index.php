@@ -14,7 +14,6 @@ require_once "/libs/gallery/rating.php";
 <body>
 <?php
 require_once "/content/menu.php";
-rate($con,1,2);
 ?>
 <div id="container" ratingallowed="<?= isLogged()?>">
 
@@ -38,10 +37,13 @@ rate($con,1,2);
             <img src="/gallery/images/<?= $image['id'] ?>">
                 <p>Name: <?= $image['name']?></p>
                 <p class="ratingText">Rating:</p>
-                <div class="rating" rating="<?= $rating ?>">
+                <div class="rating" rating="<?= $rating ?> imageid="<?= $image['id'] ?>">
                     <div class="ratingFull" style="width: <?= $rating*20?>%; "><img src="/assets/ratingFull.png"></div>
                     <img class="ratingEmpty" src="/assets/ratingEmpty.png">
-                    <form action="/libs/gallery/rate.php" method="post"></form>
+                    <form action="/libs/gallery/rate.php" method="post">
+                        <input type="hidden" name="rating" class="inputrating">
+                        <input type="hidden" name="imageid" value="<?= $image['id'] ?>">
+                    </form>
                 </div>
             <p class="ratingNum""><?= $rating ?></p>
             </div>
