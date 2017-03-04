@@ -73,6 +73,12 @@ body{
 #regForm {
     border:2px solid red;
     background-color:#0A1B40;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    width: 290px;
+    height: 210px;
+    text-align: center;
 }
 #regForm input {
     border:none;
@@ -115,4 +121,9 @@ body{
 .ratingNum {
     width: 41px;
     display: inline-block;
+}
+#errorMessage {
+    color:red;
+    font-family:Consolas;
+
 }

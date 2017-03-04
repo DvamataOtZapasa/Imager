@@ -26,9 +26,9 @@ require_once "content/menu.php"
         <form action="libs/login/register.php" method="post" id="regForm">
 
             Username:<br>
-            <input name="username" type="text">
+            <input name="username" type="text"><br>
             Password:<br>
-            <input name="pass1" type="password">
+            <input name="pass1" type="password"><br>
             Password again:<br>
             <input name="pass2" type="password"><br>
             <input type="submit">
