@@ -31,7 +31,7 @@ require_once "content/menu.php"
             <input name="pass1" type="password"><br>
             Password again:<br>
             <input name="pass2" type="password"><br>
-            <input type="submit">
+            <input type="submit" value="Register">
         </form>
 
         <?php
