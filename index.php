@@ -18,7 +18,7 @@ require_once "/content/menu.php";
 <div id="container" ratingallowed="<?= isLogged()?>">
 
     <?php if(isLogged()){?>
-        <form action="/libs/gallery/upload.php" method="post" enctype="multipart/form-data">
+        <form action="/libs/gallery/upload.php" method="post" enctype="multipart/form-data" id="uploadForm">
             Name The Picture:<br>
             <input required type="text" name="name"><br>
             <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>

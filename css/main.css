@@ -95,10 +95,11 @@ body{
     margin-right: 25px;
     background-color:#64649a;
     text-align: center;
+    margin-bottom: 25px;
 }
 #container .img img {
     width:270px;
-    padding-top: 9px;
+    height: 265px;
 }
 #container .img p {
     text-align: center;
@@ -148,4 +149,17 @@ body{
     text-align:center;
     font-family:Consolas;
     dislay:inline-block;
+}
+#uploadForm {
+    width: 345px;
+    background-color:#1D315E ;
+    text-align: center;
+    color: white;
+    font-family: consolas;
+    border-bottom-right-radius: 115px;
+}
+#uploadForm input {
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 6px;
 }
