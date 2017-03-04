@@ -16,7 +16,7 @@ require_once "/libs/gallery/rating.php";
     <div id="container">
         <div id="owners">
             <h2>This site is made by:</h2>
-            <p>Viktor Aleksiev</p>
+            <p>Viktor Angeliev</p>
             <p>Dimitur Meshev</p>
         </div>
 
