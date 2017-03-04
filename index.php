@@ -8,6 +8,8 @@ require_once "/libs/gallery/rating.php";
 <head>
     <title>Imager</title>
     <link type="text/css" rel="stylesheet" href="css/main.css" >
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/gallery.js" type="text/javascript"></script>
 </head>
 <body>
 <?php
@@ -16,7 +18,7 @@ require_once "/content/menu.php"
 <div id="container">
 
     <?php if(isLogged()){?>
-        <form action="/gallery/upload.php" method="post" enctype="multipart/form-data">
+        <form action="/libs/gallery/upload.php" method="post" enctype="multipart/form-data">
             Name The Picture:<br>
             <input required type="text" name="name"><br>
             <input required type="file" accept="image/*" name="fileToUpload" cols="7"/>
@@ -30,17 +32,18 @@ require_once "/content/menu.php"
     }*/
     $resulta = mysqli_fetch_all($result,MYSQLI_ASSOC);
     foreach ($resulta as $image){
+        $rating = getRating($con,$image['id']);
         ?> <div class="img">
             <img src="/gallery/images/<?= $image['id'] ?>">
                 <p>Name: <?= $image['name']?></p>
                 <p class="ratingText">Rating:</p>
 
                 <div class="rating" ">
-                    <div class="ratingFull" style="width: <?= getRating($con,$image['id'])*20?>%; "><img src="/assets/ratingFull.png"></div>
+                    <div class="ratingFull" style="width: <?= $rating*20?>%; "><img src="/assets/ratingFull.png"></div>
 
                     <img class="ratingEmpty" src="/assets/ratingEmpty.png">
                 </div>
-            <p class="ratingNum"><?= getRating($con,$image['id'])?></p>
+            <p class="ratingNum" rating="<?= $rating ?>"><?= $rating ?></p>
             </div>
         <?php
         ;
